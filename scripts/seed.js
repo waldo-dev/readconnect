@@ -7,7 +7,7 @@ const {
   following,
   booksToRead,
   reviews
-} = require('../src/app/lib/data.js');
+} = require('../src/app/lib/data-seed.js');
 const bcrypt = require('bcrypt');
 
 async function seedUsers(client) {
@@ -59,8 +59,8 @@ async function seedBooks(client) {
         published_date VARCHAR NOT NULL,
         thumbnail_url VARCHAR NOT NULL,
         status VARCHAR,
-        authors VARCHAR NOT NULL,
-        categories VARCHAR NOT NULL,
+        authors TEXT [] NOT NULL,
+        categories TEXT [] NOT NULL,
         evaluation_count INT,
         evaluation_average INT,
         short_description TEXT,

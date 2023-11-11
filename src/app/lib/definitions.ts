@@ -5,51 +5,52 @@ export type User = {
     password: string;
 };
   
-type publishedDate = {
+export type publishedDate = {
     $date: string
-}
+};
+
 export type Book = {
-    id: number | null;
+    id: number;
     title: string;
     isbn: string;
     pageCount: number;
-    publishedDate: publishedDate;
-    thumbnailUrl: string;
+    published_date: publishedDate;
+    thumbnail_url: string;
     status: string;
-    authors: string[];
-    categories: string[];
-    shortDescription: string;
-    longDescription: string;
+    authors: string;
+    categories: string;
+    short_description: string;
+    long_description: string;
 };
   
 export type ReadBook = {
     id: string | null;
-    userId: string;
-    bookId: number; 
+    user_id: string;
+    book_id: number; 
 };
 
 export type BookToRead = {
     id: string | null;
-    userId: string;
-    bookId: number;
+    user_id: string;
+    book_id: number;
 }
 
 export type Review = {
     id: string | null;
-    userId: string;
-    bookId: number;
+    user_id: string;
+    book_id: number;
     review: string;
 }
 
 export type Evaluation = {
     id: string | null;
-    userId: string;
-    bookId: number;
+    user_id: string;
+    book_id: number;
     evaluation: number;
 }
 
 export type Following = {
     id: string | null;
-    userId: string;
-    followingUserId: string;
+    user_id: string;
+    following_user_id: string;
 }
